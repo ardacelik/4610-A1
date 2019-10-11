@@ -7,7 +7,8 @@ def onMessage(client, obj, msg):
 
 mqttC = mqtt.Client()
 mqttC.connect("test.mosquitto.org", 1883) # connect to server
-mqttC.subscribe("temperature", "humidity") # topic/sensorTag readings(replace with actual data)
+mqttC.subscribe("temperature") # topic/sensorTag readings(replace with actual data)
+mqttC.subscribe("humidity")
 mqttC.on_message = onMessage # callback
 mqttC.loop_start()
 
