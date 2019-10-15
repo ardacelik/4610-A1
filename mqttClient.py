@@ -1,6 +1,6 @@
 import paho.mqtt.client as mqtt
 import time
-import sensortag
+from bluepy import sensortag
 
 # message callback
 def onMessage(client, obj, msg):
